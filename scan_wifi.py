@@ -189,6 +189,8 @@ def print_table(devices):
     print()
 
 if __name__ == "__main__":
+    if not hasattr(os, "geteuid"):
+        sys.exit("This scanner needs Linux (it uses ping -c, ip neigh and raw ARP packets).")
     if os.geteuid() != 0:
         print("⚠  Run with sudo for best results: sudo -E ./venv/bin/python scan_wifi.py")
         sys.exit(1)

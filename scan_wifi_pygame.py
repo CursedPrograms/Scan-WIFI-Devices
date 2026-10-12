@@ -353,6 +353,8 @@ class WifiScanner:
             self.clock.tick(30)
 
 if __name__ == "__main__":
+    if not hasattr(os, "geteuid"):
+        sys.exit("This scanner needs Linux (it uses ping -c, ip neigh and raw ARP packets).")
     if os.geteuid() != 0:
         print("⚠  Run with sudo for best results.")
     WifiScanner().run()

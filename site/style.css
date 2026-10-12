@@ -1,0 +1,117 @@
+/* Scan-WIFI-Devices - a radar screen */
+
+:root {
+  --bg: #050a0d;
+  --panel: #0b1519;
+  --line: #17323a;
+  --text: #d9eef2;
+  --dim: #7d9aa1;
+  --teal: #2ef2c3;
+  --heading: "Space Grotesk", "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg) radial-gradient(circle at 20% 0%, #0d2a2c, var(--bg) 55%) fixed;
+  color: var(--text);
+  font-family: var(--heading);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: var(--teal); }
+
+.masthead, main, .footer { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-top: 56px;
+}
+
+#radar { flex: 0 0 auto; width: 220px; height: 220px; }
+
+h1 { margin: 0; font-size: clamp(38px, 7vw, 64px); line-height: 1.05; }
+.lead { color: var(--dim); font-size: 18px; max-width: 560px; }
+
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1.5px solid var(--teal);
+  border-radius: 8px;
+  color: var(--teal);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.button:hover, .button:focus-visible { background: var(--teal); color: var(--bg); }
+
+.shot {
+  margin: 40px 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(46, 242, 195, 0.08);
+}
+
+.shot img { display: block; width: 100%; height: auto; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.steps > * { min-width: 0; }
+
+.steps article {
+  position: relative;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.steps b {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: var(--teal);
+  font-family: var(--mono);
+  opacity: 0.6;
+}
+
+.steps h2 { margin: 0 0 6px; font-size: 19px; }
+.steps p { margin: 0; color: var(--dim); font-size: 15px; }
+
+.run { margin-top: 40px; }
+.run h2 { margin: 0 0 10px; }
+
+pre {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #03070a;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+code { font-family: var(--mono); color: var(--teal); }
+
+.small { color: var(--dim); font-size: 14px; }
+
+.footer { padding: 48px 16px; text-align: center; }
+.footer img { max-width: 100%; height: auto; }
+
+@media (max-width: 700px) {
+  .masthead { flex-direction: column; text-align: center; }
+  .lead { margin-left: auto; margin-right: auto; }
+}

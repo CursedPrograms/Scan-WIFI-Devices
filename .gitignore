@@ -128,7 +128,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+# (mkdocs /site removed: site/ holds the GitHub Pages CSS and JS)
 
 # mypy
 .mypy_cache/

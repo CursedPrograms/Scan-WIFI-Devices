@@ -232,4 +232,6 @@ class App(tk.Tk):
         self.btn.config(state="normal", text="⟳  Refresh")
 
 if __name__ == "__main__":
+    if not hasattr(os, "geteuid"):
+        sys.exit("This scanner needs Linux (it uses ping -c, ip neigh and raw ARP packets).")
     App().mainloop()

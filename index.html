@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scan-WIFI-Devices - who's on your Wi-Fi?</title>
+<meta name="description" content="Find every device on your Wi-Fi: IP, MAC, hostname, maker and a guess at what it is. Ping sweep + ARP scan + ARP cache. Terminal, Tkinter and Pygame. Linux.">
+<link rel="icon" href="site/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="site/style.css">
+<script src="site/site.js" defer></script>
+</head>
+<body>
+
+<header class="masthead">
+  <canvas id="radar" width="260" height="260" aria-hidden="true"></canvas>
+  <div>
+    <h1>Who's on your Wi-Fi?</h1>
+    <p class="lead">Every device on your network: IP, MAC, hostname, maker, and a best guess at what it is.
+      Even the phones that hide behind a random MAC.</p>
+    <a class="button" href="https://github.com/CursedPrograms/Scan-WIFI-Devices">GET IT ON GITHUB</a>
+  </div>
+</header>
+
+<main>
+  <figure class="shot">
+    <img src="screenshot.png" alt="A terminal scan: a router and three phones with randomized MACs" width="903" height="392">
+  </figure>
+
+  <section class="steps">
+    <article><b>1</b><h2>Ping sweep</h2><p>All 254 addresses, 100 at a time. Wakes sleeping devices up.</p></article>
+    <article><b>2</b><h2>ARP scan</h2><p>Raw ARP requests with scapy: devices that ignore pings still answer.</p></article>
+    <article><b>3</b><h2>ARP cache</h2><p><code>ip neigh</code> fills in anything the first two missed.</p></article>
+    <article><b>4</b><h2>Who is it?</h2><p>Hostname, maker from the MAC, and a type guess. Randomized MACs get flagged as phones.</p></article>
+  </section>
+
+  <section class="run">
+    <h2>Run it</h2>
+    <pre><code>pip install -r requirements.txt
+sudo -E ./venv/bin/python scan_wifi.py           # terminal
+sudo -E ./venv/bin/python scan_wifi_tkinter.py   # window
+sudo -E ./venv/bin/python scan_wifi_pygame.py    # animated</code></pre>
+    <p class="small">Linux, Python 3.9+, root for the ARP scan. Only scan networks you own or are allowed to scan.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><a href="https://farica-kimora.github.io/FaricaKimora/">Farica&#9734;Kimora</a> &copy; Cursed Entertainment</p>
+  <a href="https://cursed-entertainment.itch.io/">
+    <img src="https://github.com/CursedPrograms/cursedentertainment/raw/main/images/logos/logo-wide-grey.png" alt="Cursed Entertainment" width="250">
+  </a>
+  <p class="small"><a href="https://github.com/CursedPrograms/Scan-WIFI-Devices">GitHub</a> &middot; MIT licence</p>
+</footer>
+
+</body>
+</html>
