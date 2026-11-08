@@ -32,6 +32,14 @@ cache, so sleeping phones show up too. Terminal, Tkinter and Pygame versions.
 
 ![A scan in the terminal](screenshot.png)
 
+### The Tkinter window
+
+| Scanning | Done |
+| --- | --- |
+| ![The Tkinter window while it scans](images/tkinter-scanning.png) | ![The Tkinter window after a scan](images/tkinter-window.png) |
+
+A real scan of a small home network: the router and this PC (MAC addresses and hostname masked).
+
 ## What you need
 - **Linux** (it uses `ping -c`, `ip neigh` and raw ARP packets; on Windows it says so and stops).
 - **Python 3.9+** and root for the ARP scan.
@@ -59,6 +67,13 @@ Only scan networks you own or are allowed to scan.
 ## Tests
 `python -m pytest` checks the MAC and device-type helpers (run by the GitHub workflow on every push).
 
+<div align="center">
+<a href="https://cursedprograms.github.io/Scan-WIFI-Devices/" target="_blank">
+    <img src="https://raw.githubusercontent.com/CursedPrograms/Scan-WIFI-Devices/main/images/site-qr.png"
+        alt="QR code to the Scan-WIFI-Devices website" style="width:200px;">
+</a>
+</div>
+
 ## License
 MIT, see [LICENSE](LICENSE).
 
@@ -71,7 +86,7 @@ MIT, see [LICENSE](LICENSE).
 <br>
 <div align="center">
 <a href="https://cursed-entertainment.itch.io/" target="_blank">
-    <img src="https://github.com/CursedPrograms/cursedentertainment/raw/main/images/logos/logo-wide-grey.png"
+    <img src="https://raw.githubusercontent.com/CursedPrograms/cursedentertainment/main/images/logos/logo-wide-grey.png"
         alt="CursedEntertainment Logo" style="width:250px;">
 </a>
 </div>

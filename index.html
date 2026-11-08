@@ -29,6 +29,11 @@
     <img src="screenshot.png" alt="A terminal scan: a router and three phones with randomized MACs" width="903" height="392">
   </figure>
 
+  <figure class="shot">
+    <img src="images/tkinter-window.png" alt="The Tkinter window after a scan: the router and this PC, MAC addresses and hostname masked" width="1000" height="300">
+    <figcaption>The Tkinter window after a real scan (MACs and hostname masked).</figcaption>
+  </figure>
+
   <section class="steps">
     <article><b>1</b><h2>Ping sweep</h2><p>All 254 addresses, 100 at a time. Wakes sleeping devices up.</p></article>
     <article><b>2</b><h2>ARP scan</h2><p>Raw ARP requests with scapy: devices that ignore pings still answer.</p></article>
@@ -47,9 +52,10 @@ sudo -E ./venv/bin/python scan_wifi_pygame.py    # animated</code></pre>
 </main>
 
 <footer class="footer">
+  <div class="qr"><a href="https://cursedprograms.github.io/Scan-WIFI-Devices/"><img src="images/site-qr.png" alt="QR code to this page" width="160" height="183"></a></div>
   <p><a href="https://farica-kimora.github.io/FaricaKimora/">Farica&#9734;Kimora</a> &copy; Cursed Entertainment</p>
   <a href="https://cursed-entertainment.itch.io/">
-    <img src="https://github.com/CursedPrograms/cursedentertainment/raw/main/images/logos/logo-wide-grey.png" alt="Cursed Entertainment" width="250">
+    <img src="https://raw.githubusercontent.com/CursedPrograms/cursedentertainment/main/images/logos/logo-wide-grey.png" alt="Cursed Entertainment" width="250">
   </a>
   <p class="small"><a href="https://github.com/CursedPrograms/Scan-WIFI-Devices">GitHub</a> &middot; MIT licence</p>
 </footer>

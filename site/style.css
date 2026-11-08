@@ -16,7 +16,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg) radial-gradient(circle at 20% 0%, #0d2a2c, var(--bg) 55%) fixed;
+  background: var(--bg);
   color: var(--text);
   font-family: var(--heading);
   line-height: 1.6;
@@ -57,7 +57,6 @@ h1 { margin: 0; font-size: clamp(38px, 7vw, 64px); line-height: 1.05; }
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(46, 242, 195, 0.08);
 }
 
 .shot img { display: block; width: 100%; height: auto; }
@@ -115,3 +114,14 @@ code { font-family: var(--mono); color: var(--teal); }
   .masthead { flex-direction: column; text-align: center; }
   .lead { margin-left: auto; margin-right: auto; }
 }
+
+.shot figcaption {
+  padding: 8px 12px;
+  color: var(--dim);
+  font-size: 14px;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+}
+
+.qr { text-align: center; margin: 24px 0 8px; }
+.qr img { width: 160px; height: auto; }
